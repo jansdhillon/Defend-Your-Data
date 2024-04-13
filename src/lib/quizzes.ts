@@ -15,6 +15,16 @@ export const quizzes: IQuiz[] = [
                     { id: "d", text: "None of the above" }
                 ],
                 correctAnswer: "a"
+            },
+            {
+                question: "What is a common cyber threat?",
+                options: [
+                    { id: "a", text: "Phishing" },
+                    { id: "b", text: "Social media" },
+                    { id: "c", text: "Online shopping" },
+                    { id: "d", text: "All of the above" }
+                ],
+                correctAnswer: "a"
             }
         ]
     },
@@ -31,6 +41,16 @@ export const quizzes: IQuiz[] = [
                     { id: "d", text: "All of the above" }
                 ],
                 correctAnswer: "b"
+            },
+            {
+                question: "What should you do if you suspect a phishing attack?",
+                options: [
+                    { id: "a", text: "Click on the links in the email" },
+                    { id: "b", text: "Reply to the email with your personal information" },
+                    { id: "c", text: "Delete the email and report it" },
+                    { id: "d", text: "Forward the email to all your contacts" }
+                ],
+                correctAnswer: "c"
             }
         ]
     },
@@ -47,7 +67,18 @@ export const quizzes: IQuiz[] = [
                     { id: "d", text: "Your favorite movie" }
                 ],
                 correctAnswer: "c"
-            }
+            },
+            {
+              question: "Which of the following would be considered a strong password?",
+              options: [
+                  { id: "a", text: "dannythedog" },
+                  { id: "b", text: "iLiveInKelowna" },
+                  { id: "c", text: "kevinh2000" },
+                  { id: "d", text: "#iL0v3_K4hLoHN4!" }
+              ],
+              correctAnswer: "d"
+          },
+
         ]
     }
 ];

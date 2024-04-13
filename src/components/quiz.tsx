@@ -20,7 +20,9 @@ const Quiz = ({ questions }: { questions: IQuestion[] }) => {
   };
 
   const handleSubmit = () => {
-    setQuizSubmitted(true);
+    if (Object.keys(answers).length === questions.length) {
+      setQuizSubmitted(true);
+    }
   };
 
   const handleReset = () => {
@@ -41,7 +43,7 @@ const Quiz = ({ questions }: { questions: IQuestion[] }) => {
       {" "}
 
       {questions.map((q, index) => (
-        <div key={index} className="flex flex-col ">
+        <div key={index} className="flex flex-col gap-3 ">
           <div className="font-semibold italic">{q.question}</div>
           {q.options.map((option) => (
             <label
@@ -55,6 +57,7 @@ const Quiz = ({ questions }: { questions: IQuestion[] }) => {
                 onChange={() => handleOptionChange(q.question, option.id)}
                 disabled={quizSubmitted}
                 className="accent-primary"
+                required
               />
               <span>{option.text}</span>
             </label>
@@ -65,16 +68,18 @@ const Quiz = ({ questions }: { questions: IQuestion[] }) => {
         <Button onClick={handleSubmit}>Check Answer</Button>
       ) : (
         <>
-          <div>
+          <div className="space-y-3">
             {Object.entries(answers).map(([question, optionId], index) => (
               <div
                 key={index}
                 className={`${
+
                   isCorrectAnswer(question, optionId)
                     ? "text-green-500"
                     : "text-red-500"
                 } font-bold p-0 `}
               >
+                {question}:
                 {isCorrectAnswer(question, optionId) ? (
                   <div className="flex gap-2">
                     <Check />
@@ -90,7 +95,7 @@ const Quiz = ({ questions }: { questions: IQuestion[] }) => {
             ))}
           </div>
           <Button onClick={handleReset} className="font-bold flex gap-2">
-            <RotateCw size={15} />
+            <RotateCw size={20} />
             Reset Quiz
           </Button>
         </>

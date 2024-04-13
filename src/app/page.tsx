@@ -26,7 +26,7 @@ const cybersecurityTopics = [
   {
     title: "Common Cybercrime Methods",
     subtitle: "Recognize and Avoid Threats",
-    body: "Learn about phishing, malware, ransomware, social engineering, and more. Understanding these common techniques can help you protect yourself from the most prevalent cyber threats.",
+    body: "Learn about phishing, malware, spam, social engineering, and more. Understanding these common techniques can help you protect yourself from the most prevalent cyber threats.",
     link: "/common-cybercrime-methods",
   },
   {
@@ -89,11 +89,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col h-screen">
       <Nav />
       <Separator />
-      <div className="flex justify-center flex-col md:grid md:grid-cols-3 gap-3 p-10 overflow-scroll w-full items-start h-full border-accent border-8 rounded-md">
+      <div className="flex justify-center flex-col md:grid md:grid-cols-3 gap-3 p-10 overflow-scroll w-full items-start h-full">
         {cybersecurityTopics.map((topic, index) => (
           <Card
             key={index}
-            className="w-[350px] h-[350px] flex flex-col bg-card m-2 border-accent shadow-md p-4"
+            className="w-[350px] h-[350px] flex flex-col bg-card m-2 shadow-md p-4"
           >
             <CardHeader>
               <CardTitle>{topic.title}</CardTitle>
