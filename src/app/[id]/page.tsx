@@ -56,14 +56,14 @@ const articlesContent: { [key: string]: ArticleContent } = {
         <div className="p-4 flex flex-col gap-5">
           <p>
             <strong>Cybersecurity</strong> encompasses many different topics,
-            but it's essentially how you defend your data and protect
+            but it&apos;s essentially how you defend your data and protect
             yourself from cybercrime. It involves protecting internet-connected
             systems such as hardware, software, and data from cyber threats. This field
             aims to protect against unauthorized access to computer systems and plays a
             crucial role in safeguarding our digital lives.
           </p>
           <p>
-            In the context of <strong>digital citizenship</strong>, cybersecurity is fundamental in ensuring that citizens possess the knowledge and tools necessary to participate safely and responsibly in the digital world. As digital citizens, it's imperative to understand the responsibilities associated with managing personal and sensitive information effectively.
+            In the context of <strong>digital citizenship</strong>, cybersecurity is fundamental in ensuring that citizens possess the knowledge and tools necessary to participate safely and responsibly in the digital world. As digital citizens, it&apos;s imperative to understand the responsibilities associated with managing personal and sensitive information effectively.
           </p>
           <p>
             <strong>Cybercrime</strong> is the use of computers and/or the
@@ -78,7 +78,7 @@ const articlesContent: { [key: string]: ArticleContent } = {
             parties.
           </p>
           <p>
-            By embracing cybersecurity practices, individuals uphold their <strong>ethical duties</strong> to themselves and others within the digital community. Effective cybersecurity reduces risks not only to one's data but also fortifies the security and resilience of the infrastructure that supports our community's digital activities.
+            By embracing cybersecurity practices, individuals uphold their <strong>ethical duties</strong> to themselves and others within the digital community. Effective cybersecurity reduces risks not only to one&apos;s data but also fortifies the security and resilience of the infrastructure that supports our community&apos;s digital activities.
           </p>
           <p>
             This emphasis on proactive security measures is important for preserving trust in digital transactions and interactions. The goal is to foster a safe online environment where all users can contribute positively and with minimal risk of harm.
