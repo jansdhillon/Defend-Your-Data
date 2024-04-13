@@ -19,8 +19,7 @@ export const Nav = () => {
           <ThemeSwitcher />
         </div>
         <div className="text-sm md:text-lg text-muted-foreground font-semibold p-2">
-          Explore the essentials of cybersecurity and learn about the role of
-          cybersecurity in digital citizenship.
+          Explore the essentials of cybersecurity and learn about its role in digital citizenship.
         </div>
         {path !== "/" ? (
           <Link href="/">
