@@ -93,7 +93,7 @@ export default function Home() {
           {cybersecurityTopics.map((topic, index) => (
             <Card
               key={index}
-              className="w-[250px] md:w-[350px] h-[450px] m:h-[350px] flex flex-col bg-card m-2 shadow-md p-4"
+              className="w-[250px] md:w-[350px] h-[450px] m:h-[350px] flex flex-col bg-card m-2 shadow-sm p-4"
             >
               <CardHeader>
                 <CardTitle>{topic.title}</CardTitle>
