@@ -1,42 +1,133 @@
+"use client";
 import React from "react";
-import { quizzes } from "@/components/quizzes";
 import { ShieldCheck } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
-import Article from "@/components/article";
-import CybersecurityBasicsContent from "@/components/basic-content";
 import { ThemeSwitcher } from "@/components/theme-switcher";
+import { Separator } from "@/components/ui/separator";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Nav } from "./nav";
+import { Footer } from "./footer";
+
+const cybersecurityTopics = [
+  {
+    title: "What is Cybersecurity?",
+    subtitle: "Understanding the Basics",
+    body: "Cybersecurity involves protecting internet-connected systems such as hardware, software, and data from cyber threats. It aims to protect against unauthorized access to computer systems.",
+    link: "/cybersecurity-basics",
+  },
+  {
+    title: "Common Cybercrime Methods",
+    subtitle: "Recognize and Avoid Threats",
+    body: "Learn about phishing, malware, ransomware, social engineering, and more. Understanding these common techniques can help you protect yourself from the most prevalent cyber threats.",
+    link: "/common-cybercrime-methods",
+  },
+  {
+    title: "Defend Your Data",
+    subtitle: "How to Stay Safe",
+    body: "Discover how to protect yourself and your data with effective strategies like using strong passwords, enabling two-factor authentication, and understanding privacy settings.",
+    link: "/how-to-stay-safe",
+  },
+];
+
+const resources = [
+  { name: "Privacy Matters @ UBC", url: "https://privacymatters.ubc.ca/" },
+  { name: "Stay Safe Online", url: "https://www.staysafeonline.org/" },
+  {
+    name: "Get Cyber Safe",
+    url: "https://www.getcybersafe.gc.ca/index-eng.aspx",
+  },
+  { name: "Stop|Think|Connect", url: "https://www.stopthinkconnect.org/" },
+  {
+    name: "The SANS Institute",
+    url: "https://www.sans.org/security-resources/",
+  },
+  {
+    name: "The SANS Security Awareness Tip of the Day",
+    url: "https://www.sans.org/tip_of_the_day.php",
+  },
+  {
+    name: "UBC Personal Information Security Governance",
+    url: "https://riskmanagement.ubc.ca/personalinfosecuritygovernance",
+  },
+  {
+    name: "UBC Information Security Office",
+    url: "https://it.ubc.ca/services/security/ubc-information-security-office",
+  },
+  {
+    name: "RCMP Internet Safety Resources",
+    url: "https://www.rcmp-grc.gc.ca/is-si/index-eng.htm",
+  },
+  {
+    name: "Microsoft's Safety & Security Center",
+    url: "https://www.microsoft.com/security/resources/cybersecurity.aspx",
+  },
+  {
+    name: "Google's Good to Know",
+    url: "https://www.google.ca/goodtoknow/online-safety/",
+  },
+  {
+    name: "Sophos's Facebook Security Best Practices",
+    url: "https://www.sophos.com/en-us/security-news-trends/best-practices/facebook.aspx",
+  },
+  {
+    name: "Twitter's Safe Tweeting",
+    url: "https://support.twitter.com/articles/76036-keeping-your-account-secure#",
+  },
+  { name: "Fight Cyber Stalking", url: "https://www.fightcyberstalking.org/" },
+];
 
 export default function Home() {
-  const quizToDisplay = quizzes[0];
-  const content = [
-    {
-      title: "Cybersecurity Basics",
-      subtitle: "Learn the basics of cybersecurity",
-      body: <CybersecurityBasicsContent />,
-      quiz: quizToDisplay,
-    },
-  ];
-
   return (
-    <main className="flex min-h-screen flex-col items-start justify-between p-24 w-full h-screen border-accent border-8">
-      <div className="text-4xl font-bold flex items-center gap-5 w-full">
-        <div>
-          <ShieldCheck size={30} />
-        </div>
-        Defend Your Data
-        <ThemeSwitcher/>
-      </div>
-
+    <main className="flex min-h-screen flex-col h-screen">
+      <Nav />
       <Separator />
-      <div className=" font-semibold flex justify-start flex-col gap-3">
-        <div className="text-3xl">Articles</div>
-        <div className="text-muted-foreground">
-          Learn about cybersecurity basics and how to protect your data
+      <div className="flex justify-center flex-col md:grid md:grid-cols-3 gap-3 p-10 overflow-scroll w-full items-start h-full border-accent border-8 rounded-md">
+        {cybersecurityTopics.map((topic, index) => (
+          <Card
+            key={index}
+            className="w-[350px] h-[350px] flex flex-col bg-card m-2 border-accent shadow-md p-4"
+          >
+            <CardHeader>
+              <CardTitle>{topic.title}</CardTitle>
+              <CardDescription>{topic.subtitle}</CardDescription>
+            </CardHeader>
+            <CardContent className="text-sm flex-grow">
+              {topic.body}
+            </CardContent>
+            <CardFooter className="mt-auto w-full flex justify-end ">
+              <Link href={topic.link}>
+                <Button>Read More</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        ))}
+        <div className="w-full p-4shadow-md mt-4 flex flex-col gap-2">
+          <h2 className="text-lg font-bold mb-3">Additional Resources</h2>
+          <Separator />
+          <ul className="list-disc pl-5">
+            {resources.map((resource, index) => (
+              <li key={index} className="mb-2">
+                <Link
+                  href={resource.url}
+                  target="_blank"
+                  className="text-blue-500 hover:text-blue-700"
+                >
+                  {resource.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-        <Separator />
       </div>
-
-      <Article content={content[0]} />
+      <Footer />
     </main>
   );
 }
