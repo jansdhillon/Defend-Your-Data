@@ -88,12 +88,12 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col">
-        <Separator />
-        <div className="flex justify-center flex-col md:grid md:grid-cols-3 gap-3 p-10 overflow-scroll w-full items-center md:justify-start h-full">
+        <h2 className="text-2xl font-semibold text-left pt-12 pl-10">Articles</h2>
+        <div className="flex justify-center flex-col lg:grid lg:grid-cols-3 gap-3 p-10 overflow-scroll w-full items-center lg:justify-start h-full">
           {cybersecurityTopics.map((topic, index) => (
             <Card
               key={index}
-              className="w-[250px] md:w-[350px] h-[450px] m:h-[350px] flex flex-col bg-card m-2 shadow-sm p-4"
+              className="w-[250px] md:w-[500px] lg:w-[350px]  h-[450px] lg:h-[350px] flex flex-col bg-card m-2 shadow-sm p-4"
             >
               <CardHeader>
                 <CardTitle>{topic.title}</CardTitle>
@@ -109,7 +109,7 @@ export default function Home() {
               </CardFooter>
             </Card>
           ))}
-          <div className="w-full p-4shadow-md mt-4 flex flex-col gap-2">
+          <div className="w-full p-4shadow-lg mt-4 flex flex-col gap-2">
             <h2 className="text-lg font-bold mb-3">Additional Resources</h2>
             <Separator />
             <ul className="list-disc pl-5">

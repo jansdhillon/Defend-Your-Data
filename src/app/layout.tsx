@@ -24,8 +24,8 @@ export default function RootLayout({
         defaultTheme="system"
         disableTransitionOnChange
       >
-        <body className={`${inter.className} min-h-screen h-screen`}>
-          <Nav/>
+        <Nav />
+        <body className={`${inter.className} min-h-screen h-screen mt-48`}>
           {children}
         </body>
       </ThemeProvider>

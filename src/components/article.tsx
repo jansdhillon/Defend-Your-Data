@@ -8,7 +8,7 @@ import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 const Article = ({ title, content, quizzes }: IArticle) => {
   return (
     <div className="flex flex-col items-start space-y-4 max-h-[80%] w-full">
-      <div className="text-2xl font-semibold text-primary">{title}</div>
+      <div className="text-2xl font-semibold text-primary pt-12 pb-8">{title}</div>
       <ScrollArea className="border p-4 overflow-auto">{content}</ScrollArea>
       <Separator />
       <div className="text-lg font-bold mt-4 mb-2 flex gap-2 items-center">
