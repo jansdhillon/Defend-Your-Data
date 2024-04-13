@@ -277,7 +277,7 @@ const articlesContent: { [key: string]: ArticleContent } = {
 
         <section className="space-y-4 mt-4">
           <h3 className="text-lg font-bold text-primary mb-2 flex gap-2 items-center">
-            Choose a Strong Password and Don't Share It
+            Choose a Strong Password and Don&apos;t Share It
             <KeyRound className="text-blue-500" />
           </h3>
           <p className="text-sm">
