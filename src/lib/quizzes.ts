@@ -17,15 +17,26 @@ export const quizzes: IQuiz[] = [
                 correctAnswer: "a"
             },
             {
-                question: "What is a common cyber threat?",
+                question: "Which of the following would fall under cybercrime?",
                 options: [
-                    { id: "a", text: "Phishing" },
+                    { id: "a", text: "Identity Theft" },
                     { id: "b", text: "Social media" },
                     { id: "c", text: "Online shopping" },
                     { id: "d", text: "All of the above" }
                 ],
                 correctAnswer: "a"
+            },
+            {
+                question: "What is the role of cybersecurity in digital citizenship?",
+                options: [
+                    { id: "a", text: "To protect personal information online" },
+                    { id: "b", text: "To promote online advertising" },
+                    { id: "c", text: "To increase internet speed" },
+                    { id: "d", text: "None of the above" }
+                ],
+                correctAnswer: "a"
             }
+
         ]
     },
     {
@@ -51,6 +62,16 @@ export const quizzes: IQuiz[] = [
                     { id: "d", text: "Forward the email to all your contacts" }
                 ],
                 correctAnswer: "c"
+            },
+            {
+                question: "What is the purpose of a phishing attack?",
+                options: [
+                    { id: "a", text: "To steal sensitive information" },
+                    { id: "b", text: "To promote a new product" },
+                    { id: "c", text: "To increase website traffic" },
+                    { id: "d", text: "None of the above" }
+                ],
+                correctAnswer: "a"
             }
         ]
     },
@@ -78,6 +99,16 @@ export const quizzes: IQuiz[] = [
               ],
               correctAnswer: "d"
           },
+          {
+            question: "True or False: Multi-factor authentication is not actually useful and is a waste of time.",
+            options: [
+                { id: "a", text: "True" },
+                { id: "b", text: "False" },
+            ],
+            correctAnswer: "b"
+        },
+
+
 
         ]
     }
