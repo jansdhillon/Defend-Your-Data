@@ -87,6 +87,7 @@ const resources = [
 export default function Home() {
   return (
     <>
+     <Nav />
       <main className="flex flex-col">
         <h2 className="text-2xl font-semibold text-left pt-12 pl-10">Articles</h2>
         <div className="flex justify-center flex-col lg:grid lg:grid-cols-3 gap-3 p-10 overflow-scroll w-full items-center lg:justify-start h-full">
