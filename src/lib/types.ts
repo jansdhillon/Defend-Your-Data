@@ -1,4 +1,3 @@
-// lib/types.ts
 export interface IOption {
     id: string;
     text: string;

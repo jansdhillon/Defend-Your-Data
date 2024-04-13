@@ -1,4 +1,3 @@
-// lib/quizzes.ts
 import { IQuiz } from "./types";
 
 export const quizzes: IQuiz[] = [

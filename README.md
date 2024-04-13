@@ -1,3 +1,10 @@
+# Defend Your Data
+
+COSC101 Final Project by Jan-Yaeger Dhillon
+
+You can check out the video link [here!](https://youtu.be/v8NQ6yFvvkY?si=OPw6CrqugozpSzIp)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

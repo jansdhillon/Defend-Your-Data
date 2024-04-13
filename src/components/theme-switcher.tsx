@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export const ThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

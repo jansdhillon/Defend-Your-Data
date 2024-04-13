@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import { ShieldCheck } from "lucide-react";
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Separator } from "@/components/ui/separator";
 import {
   Card,
@@ -87,9 +85,11 @@ const resources = [
 export default function Home() {
   return (
     <>
-     <Nav />
+      <Nav />
       <main className="flex flex-col">
-        <h2 className="text-2xl font-semibold text-left pt-12 pl-10">Articles</h2>
+        <h2 className="text-2xl font-semibold text-left pt-12 pl-10">
+          Articles
+        </h2>
         <div className="flex justify-center flex-col lg:grid lg:grid-cols-3 gap-3 p-10 overflow-scroll w-full items-center lg:justify-start h-full">
           {cybersecurityTopics.map((topic, index) => (
             <Card
