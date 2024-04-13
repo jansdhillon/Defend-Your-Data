@@ -32,7 +32,7 @@ const cybersecurityTopics = [
   {
     title: "Defend Your Data",
     subtitle: "How to Stay Safe",
-    body: "Discover how to protect yourself and your data with effective strategies like using strong passwords, enabling two-factor authentication, and understanding privacy settings.",
+    body: "Discover how to protect yourself and your data with effective strategies like using strong passwords, enabling multi-factor authentication, and other good practices.",
     link: "/how-to-stay-safe",
   },
 ];

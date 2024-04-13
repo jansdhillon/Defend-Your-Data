@@ -58,12 +58,17 @@ const articlesContent: { [key: string]: ArticleContent } = {
             <strong>Cybersecurity</strong> encompasses many different topics,
             but it&apos;s essentially how you defend your data and protect
             yourself from cybercrime. It involves protecting internet-connected
-            systems such as hardware, software, and data from cyber threats. This field
-            aims to protect against unauthorized access to computer systems and plays a
-            crucial role in safeguarding our digital lives.
+            systems such as hardware, software, and data from cyber threats.
+            This field aims to protect against unauthorized access to computer
+            systems and plays a crucial role in safeguarding our digital lives.
           </p>
           <p>
-            In the context of <strong>digital citizenship</strong>, cybersecurity is fundamental in ensuring that citizens possess the knowledge and tools necessary to participate safely and responsibly in the digital world. As digital citizens, it&apos;s imperative to understand the responsibilities associated with managing personal and sensitive information effectively.
+            In the context of <strong>digital citizenship</strong>,
+            cybersecurity is fundamental in ensuring that citizens possess the
+            knowledge and tools necessary to participate safely and responsibly
+            in the digital world. As digital citizens, it&apos;s imperative to
+            understand the responsibilities associated with managing personal
+            and sensitive information effectively.
           </p>
           <p>
             <strong>Cybercrime</strong> is the use of computers and/or the
@@ -78,10 +83,18 @@ const articlesContent: { [key: string]: ArticleContent } = {
             parties.
           </p>
           <p>
-            By embracing cybersecurity practices, individuals uphold their <strong>ethical duties</strong> to themselves and others within the digital community. Effective cybersecurity reduces risks not only to one&apos;s data but also fortifies the security and resilience of the infrastructure that supports our community&apos;s digital activities.
+            By embracing cybersecurity practices, individuals uphold their{" "}
+            <strong>ethical duties</strong> to themselves and others within the
+            digital community. Effective cybersecurity reduces risks not only to
+            one&apos;s data but also fortifies the security and resilience of
+            the infrastructure that supports our community&apos;s digital
+            activities.
           </p>
           <p>
-            This emphasis on proactive security measures is important for preserving trust in digital transactions and interactions. The goal is to foster a safe online environment where all users can contribute positively and with minimal risk of harm.
+            This emphasis on proactive security measures is important for
+            preserving trust in digital transactions and interactions. The goal
+            is to foster a safe online environment where all users can
+            contribute positively and with minimal risk of harm.
           </p>
         </div>
       </>
@@ -315,9 +328,9 @@ const articlesContent: { [key: string]: ArticleContent } = {
                   Kalohnah
                 </li>{" "}
                 <li>
-                  Substitute letters with numbers ex. catto c4t Use the first
-                  letters of a phrase or sentence you have memorized ahahmkfah (
-                  A horse, a horse, my kingdom for a horse)
+                  Substitute letters with numbers ex. change cat to c4t Use the
+                  first letters of a phrase or sentence you have memorized
+                  ahahmkfah ( A horse, a horse, my kingdom for a horse)
                 </li>
               </ul>
             </li>
@@ -351,9 +364,8 @@ const articlesContent: { [key: string]: ArticleContent } = {
             <MousePointer className="text-blue-500" />
           </h3>
           <p className="text-sm">
-            Think before you click. You can learn more about defending your data
-            and protecting your privacy by following good security practices and
-            staying informed.
+            Be cautious when clicking on links in emails, social media posts,
+            and online advertising. If it seems suspicious, don’t click on it.
           </p>
         </section>
       </>
@@ -370,7 +382,7 @@ export default function Page({ params }: { params: { id: string } }) {
 
   return (
     <>
-     <Nav />
+      <Nav />
       <main className="flex flex-col items-start px-10 pb-10 gap-3 w-full min-h-screen">
         <Separator />
         <div className="">
