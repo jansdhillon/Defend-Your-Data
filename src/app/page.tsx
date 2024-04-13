@@ -86,48 +86,49 @@ const resources = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col h-screen">
-      <Nav />
-      <Separator />
-      <div className="flex justify-center flex-col md:grid md:grid-cols-3 gap-3 p-10 overflow-scroll w-full items-start h-full">
-        {cybersecurityTopics.map((topic, index) => (
-          <Card
-            key={index}
-            className="w-[350px] h-[350px] flex flex-col bg-card m-2 shadow-md p-4"
-          >
-            <CardHeader>
-              <CardTitle>{topic.title}</CardTitle>
-              <CardDescription>{topic.subtitle}</CardDescription>
-            </CardHeader>
-            <CardContent className="text-sm flex-grow">
-              {topic.body}
-            </CardContent>
-            <CardFooter className="mt-auto w-full flex justify-end ">
-              <Link href={topic.link}>
-                <Button>Read More</Button>
-              </Link>
-            </CardFooter>
-          </Card>
-        ))}
-        <div className="w-full p-4shadow-md mt-4 flex flex-col gap-2">
-          <h2 className="text-lg font-bold mb-3">Additional Resources</h2>
-          <Separator />
-          <ul className="list-disc pl-5">
-            {resources.map((resource, index) => (
-              <li key={index} className="mb-2">
-                <Link
-                  href={resource.url}
-                  target="_blank"
-                  className="text-blue-500 hover:text-blue-700"
-                >
-                  {resource.name}
+    <>
+      <main className="flex flex-col">
+        <Separator />
+        <div className="flex justify-center flex-col md:grid md:grid-cols-3 gap-3 p-10 overflow-scroll w-full items-center md:justify-start h-full">
+          {cybersecurityTopics.map((topic, index) => (
+            <Card
+              key={index}
+              className="w-[250px] md:w-[350px] h-[450px] m:h-[350px] flex flex-col bg-card m-2 shadow-md p-4"
+            >
+              <CardHeader>
+                <CardTitle>{topic.title}</CardTitle>
+                <CardDescription>{topic.subtitle}</CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm flex-grow">
+                {topic.body}
+              </CardContent>
+              <CardFooter className="mt-auto w-full flex justify-end ">
+                <Link href={topic.link}>
+                  <Button>Read More</Button>
                 </Link>
-              </li>
-            ))}
-          </ul>
+              </CardFooter>
+            </Card>
+          ))}
+          <div className="w-full p-4shadow-md mt-4 flex flex-col gap-2">
+            <h2 className="text-lg font-bold mb-3">Additional Resources</h2>
+            <Separator />
+            <ul className="list-disc pl-5">
+              {resources.map((resource, index) => (
+                <li key={index} className="mb-2">
+                  <Link
+                    href={resource.url}
+                    target="_blank"
+                    className="text-blue-500 hover:text-blue-700"
+                  >
+                    {resource.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </>
   );
 }

@@ -361,7 +361,6 @@ export default function Page({ params }: { params: { id: string } }) {
 
   return (
     <>
-      <Nav />
       <main className="flex flex-col items-start px-10 pb-10 gap-3 w-full min-h-screen">
         <Separator />
         <div className="">
